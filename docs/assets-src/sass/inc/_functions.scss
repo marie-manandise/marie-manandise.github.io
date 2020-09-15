@@ -1,0 +1,4 @@
+$base-size: 18;
+@function rem($target, $context: $base-size) {
+  @return ($target / $context) * 1em;
+}
