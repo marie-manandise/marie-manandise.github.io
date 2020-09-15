@@ -1,4 +1,7 @@
+$dark: #2E2836;
+$light: #EDFFEC;
 body {
-  background-color: #EDFFEC;
+  background-color: $light;
+  color: $dark;
   font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
 }
