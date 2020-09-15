@@ -1,0 +1,44 @@
+{
+  "name": "marie-manandise",
+  "version": "1.0.0",
+  "description": "npm scripts for Marie Manandise's personal website",
+  "main": "index.js",
+  "scripts": {
+   "css:mainsass:compressed": "node-sass --output-style=compressed --source-map=true sass/styles.scss ../assets/css/styles.min.css",
+   "css:mainsass:uncompressed": "node-sass sass/styles.scss ../assets/css/styles.css",
+   "css:sass": "npm-run-all --parallel css:mainsass:*",
+   "css:autoprefixer": "autoprefixer-cli -d ../assets/css ../assets/css/*.css",
+   "css": "npm-run-all --sequential css:sass css:autoprefixer",
+   "images:imagemin": "imagemin img/* --out-dir=../assets/img",
+   "images:svg": "svgo --folder=/svg --output=../assets/svg",
+   "images": "npm-run-all --parallel images:imagemin images:svg",
+   //"fonts": "shx cp -r ../fonts/* ../assets/fonts",
+   "jsmain:babel:compressed": "babel js/app.js --out-file ../assets/js/app.min.js --minified --compact",
+   "jsmain:babel:uncompressed": "babel js/app.js --out-file ../assets/js/app.js",
+   "js": "npm-run-all --parallel jsmain:babel:*",
+   "build": "npm-run-all --parallel css images fonts js",
+   "prebuild": "rimraf('../assets') && shx mkdir -p ../assets/fonts && shx mkdir ../assets/img && shx mkdir ../assets/js && shx mkdir ../assets/styles && shx mkdir ../assets/svg",
+   "watch:css": "watch 'npm run css' css --interval=1",
+   "watch:images:svg": "watch 'npm run images:svg' svg --interval=1",
+   "watch:images:imagemin": "watch 'npm run images:imagemin' img --interval=1",
+   "watch:fonts": "watch 'npm run fonts' fonts --interval=1",
+   "watch:jsmainbabel:compressed": "watch 'npm run jsmain:babel:compressed' js/ --ignoreDirectoryPattern=/libraries/.*/ --interval=1",
+   "watch:jsmainbabel:uncompressed": "watch 'npm run jsmain:babel:uncompressed' js/ --ignoreDirectoryPattern=/libraries/.*/ --interval=1",
+   "watch": "npm-run-all --parallel watch:* watch:*:*"
+  },
+  "author": "Marie Manandise",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.10.5",
+    "autoprefixer-cli": "^1.0.0",
+    "imagemin-cli": "^6.0.0",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "shx": "^0.3.2",
+    "svgo": "^1.3.2",
+    "watch": "^1.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1"
+  }
+}
