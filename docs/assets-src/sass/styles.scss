@@ -1,5 +1,5 @@
-$dark: #2E2836;
-$light: #EDFFEC;
+@import 'inc/variables';
+@import 'inc/normalize';
 body {
   background-color: $light;
   color: $dark;
