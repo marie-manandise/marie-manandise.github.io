@@ -2,19 +2,44 @@
 @import 'inc/_fonts';
 @import 'inc/_variables';
 @import 'inc/_normalize';
+
+
 body {
   background-color: $light;
   color: $dark;
   font-size: rem(20);
-  line-height: 2rem;
+  line-height: 2.2;
   font-family: 'Libre Baskerville', serif;
 }
 
 h1, h2, h3, h4, h5 ,h6 {
-  color: $accent;
-  // font-family: 'Patua One',serif;
-  font-family: 'Libre Baskerville', serif;
-  letter-spacing: rem(2);
+  color: $background;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.8;
+}
+
+h1 {
+  font-size: rem(45);
+}
+
+h2 {
+  font-size: rem(40);
+}
+
+h3 {
+  font-size: rem(35);
+}
+
+h4 {
+  font-size: rem(30);
+}
+
+h5 {
+  font-size: rem(25);
+}
+
+h6 {
+  font-size: rem(20);
 }
 
 a {
@@ -61,9 +86,22 @@ a {
   margin: auto;
 }
 
+p, ul, ol, table {
+  margin: rem(35) 0 0 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+  margin-top: rem(50);
+  &:first-child {
+    margin-top: rem(15);
+  }
+}
+
 header {
-  background-color: $background;
-  color: $light;
+  background-color: $accent;
+  background: linear-gradient(190deg, rgba(176,46,12,1) 16%, rgba(4,75,127,1) 66%);  color: $light;
   a, a:visited, a:focus, a:hover,
   h1, h2, h3, h4, h5, h6 {
     color: $light;
@@ -72,11 +110,28 @@ header {
 
 #main-nav ul {
   padding: 0;
-  margin: 0 -1.5rem;
+  margin: rem(35) -1.5rem 0 -1.5rem;
   display: flex;
+  flex-direction: column;
   list-style-type: none;
   li {
     a {
+      font-family: "Quicksand", sans-serif;
+      padding: 1.5rem;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-color: red;
+  }
+  #main-nav ul {
+    flex-direction: row;
+    li a {
       padding: 0.75rem 1.5rem;
     }
   }

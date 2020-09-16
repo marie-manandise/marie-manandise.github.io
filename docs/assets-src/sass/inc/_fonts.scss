@@ -26,12 +26,12 @@
        url('../fonts/libre-baskerville-v9-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* patua-one-regular - latin */
+/* quicksand-700 - latin */
 @font-face {
-  font-family: 'Patua One';
+  font-family: 'Quicksand';
   font-style: normal;
-  font-weight: 400;
-  src: local('Patua One'), local('PatuaOne-Regular'),
-       url('../fonts/patua-one-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/patua-one-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/quicksand-v21-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/quicksand-v21-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
