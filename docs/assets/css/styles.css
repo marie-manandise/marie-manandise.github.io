@@ -445,7 +445,7 @@ header {
     color: #FEF6D7; }
   header .container {
     padding: 1.22222em 2.22222em; }
-    header .container h1, header .container h2 {
+    header .container h1, header .container h2, header .container h3 {
       margin-top: 0;
       font-size: 1.66667em; }
 
