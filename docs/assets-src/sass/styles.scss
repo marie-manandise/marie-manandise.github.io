@@ -189,32 +189,23 @@ header {
   }
 }
 
+.main-copy .intro {
+  &::after {
+    display: block;
+    content: '';
+    width: rem(324);
+    height: rem(300);
+    background-image: url("../../assets/img/marie-sketch.png");
+    background-repeat: no-repeat;
+    background-size: rem(324) auto;
+    background-position: 0 center;
+    margin: auto;
+  }
+}
+
 @media (min-width: rem(550)) {
   #main-nav ul {
     flex-direction: row;
-  }
-
-  .main-copy .intro {
-    position: relative;
-    overflow: visible;
-    * {
-      position: relative;
-      z-index: 2;
-    }
-    &::after {
-      display: block;
-      content: '';
-      position: absolute;
-      width: rem(324);
-      height: rem(300);
-      background-image: url("../../assets/img/marie-sketch.png");
-      background-repeat: no-repeat;
-      background-size: rem(324) auto;
-      background-position: 0 center;
-      bottom: rem(-60);
-      right: rem(-200);
-      z-index: 1;
-    }
   }
 }
 
@@ -236,6 +227,20 @@ header {
         padding-top: rem(10);
         padding-bottom: rem(10);
       }
+    }
+  }
+}
+
+@media (min-width: rem(1050)) {
+  .main-copy .intro {
+    position: relative;
+    overflow: visible;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: rem(-60);
+      right: rem(-200);
+      z-index: 1;
     }
   }
 }

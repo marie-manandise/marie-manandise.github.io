@@ -481,29 +481,21 @@ header {
     padding-bottom: 0.83333em;
     padding-top: 0.83333em; }
 
+.main-copy .intro::after {
+  display: block;
+  content: '';
+  width: 18em;
+  height: 16.66667em;
+  background-image: url("../../assets/img/marie-sketch.png");
+  background-repeat: no-repeat;
+  background-size: 18em auto;
+  background-position: 0 center;
+  margin: auto; }
+
 @media (min-width: 30.55556em) {
   #main-nav ul {
     -ms-flex-direction: row;
-        flex-direction: row; }
-  .main-copy .intro {
-    position: relative;
-    overflow: visible; }
-    .main-copy .intro * {
-      position: relative;
-      z-index: 2; }
-    .main-copy .intro::after {
-      display: block;
-      content: '';
-      position: absolute;
-      width: 18em;
-      height: 16.66667em;
-      background-image: url("../../assets/img/marie-sketch.png");
-      background-repeat: no-repeat;
-      background-size: 18em auto;
-      background-position: 0 center;
-      bottom: -3.33333em;
-      right: -11.11111em;
-      z-index: 1; } }
+        flex-direction: row; } }
 
 @media (min-width: 50em) {
   header .container {
@@ -519,6 +511,17 @@ header {
       margin: 0;
       padding-top: 0.55556em;
       padding-bottom: 0.55556em; } }
+
+@media (min-width: 58.33333em) {
+  .main-copy .intro {
+    position: relative;
+    overflow: visible; }
+    .main-copy .intro::after {
+      content: '';
+      position: absolute;
+      bottom: -3.33333em;
+      right: -11.11111em;
+      z-index: 1; } }
 
 footer {
   margin-top: 2.22222em; }
