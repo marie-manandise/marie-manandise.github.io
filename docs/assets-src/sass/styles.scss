@@ -207,3 +207,20 @@ header {
     }
   }
 }
+
+footer {
+  background-color: $background;
+  margin-top: rem(40);
+  .footer-content {
+    padding-bottom: rem(160);
+    background-color: $accent;
+    box-shadow: 0px 2px 13px 1px #1F1300;
+    position: relative;
+    z-index: 2;
+  }
+  p {
+    color: $light;
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+  }
+}

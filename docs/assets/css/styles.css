@@ -496,3 +496,17 @@ header {
       margin: 0;
       padding-top: 0.55556em;
       padding-bottom: 0.55556em; } }
+
+footer {
+  background-color: #B02E0C;
+  margin-top: 2.22222em; }
+  footer .footer-content {
+    padding-bottom: 8.88889em;
+    background-color: #044B7F;
+    box-shadow: 0px 2px 13px 1px #1F1300;
+    position: relative;
+    z-index: 2; }
+  footer p {
+    color: #FEF6D7;
+    font-family: "Quicksand", sans-serif;
+    margin: 0; }
