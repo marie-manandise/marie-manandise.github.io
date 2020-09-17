@@ -54,21 +54,20 @@ a {
   display: inline-block;
   padding: rem(5) rem(30);
   margin-right: rem(24);
-  color: $light;
   border-radius: rem(30);
   box-shadow: 0px 4px 6px -3px #1F1300;
-  &:visited, &:focus {
-    color: $light;
-  }
   &:nth-child(odd) {
-    background-color: $accent;
+    border: rem(5) solid $accent;
+    color: $accent;
   }
   &:nth-child(even) {
-    background-color: $background;
+    border: rem(5) solid $background;
+    color: $background;
   }
   &:hover {
-    color: $light;
+    color: $accent-2;
     text-decoration: none;
+    border-color: $accent-2;
   }
 }
 
@@ -125,7 +124,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-  background-color: $background;
+  background-color: $accent;
   position: relative;
   z-index: 1;
   a, a:visited, a:focus, a:hover,
@@ -161,7 +160,7 @@ header {
 }
 
 .section-header {
-  background-color: $accent;
+  background-color: $background;
   box-shadow: 0px 2px 13px 1px #1F1300;
   color: $light;
   position: relative;
@@ -209,11 +208,11 @@ header {
 }
 
 footer {
-  background-color: $background;
+  background-color: $accent;
   margin-top: rem(40);
   .footer-content {
     padding-bottom: rem(160);
-    background-color: $accent;
+    background-color: $background;
     box-shadow: 0px 2px 13px 1px #1F1300;
     position: relative;
     z-index: 2;
