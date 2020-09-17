@@ -170,7 +170,7 @@ header {
 }
 
 .section-header {
-  background-color: $dark;
+  background-color: $dark-background;
   box-shadow: 0px 2px 13px 1px #1F1300;
   color: $light;
   position: relative;
@@ -244,7 +244,7 @@ footer {
   margin-top: rem(40);
   .footer-content {
     padding-bottom: rem(120);
-    background-color: $dark;
+    background-color: $dark-background;
     box-shadow: 0px 2px 13px 1px #1F1300;
     position: relative;
     z-index: 2;

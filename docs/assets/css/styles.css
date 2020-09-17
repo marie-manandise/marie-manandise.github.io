@@ -466,7 +466,7 @@ header {
   overflow: hidden; }
 
 .section-header {
-  background-color: #1F1300;
+  background-color: #3d2600;
   box-shadow: 0px 2px 13px 1px #1F1300;
   color: #FEF6D7;
   position: relative;
@@ -524,7 +524,7 @@ footer {
   margin-top: 2.22222em; }
   footer .footer-content {
     padding-bottom: 6.66667em;
-    background-color: #1F1300;
+    background-color: #3d2600;
     box-shadow: 0px 2px 13px 1px #1F1300;
     position: relative;
     z-index: 2; }
