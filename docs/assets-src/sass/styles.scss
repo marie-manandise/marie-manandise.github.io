@@ -53,21 +53,26 @@ a {
 .button {
   display: inline-block;
   padding: rem(5) rem(30);
+  margin-bottom: rem(24);
   margin-right: rem(24);
   border-radius: rem(30);
   box-shadow: 0px 4px 6px -3px #1F1300;
-  &:nth-child(odd) {
-    border: rem(5) solid $accent;
-    color: $accent;
-  }
-  &:nth-child(even) {
+  // &:nth-child(odd) {
+  //   border: rem(5) solid $accent;
+  //   color: $accent;
+  // }
+  // &:nth-child(even) {
     border: rem(5) solid $background;
     color: $background;
-  }
+  // }
   &:hover {
     color: $accent-2;
     text-decoration: none;
     border-color: $accent-2;
+  }
+
+  @media (min-width: 600) {
+    margin-bottom: 0;
   }
 }
 
@@ -124,16 +129,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-  background-color: $accent;
+  // background-color: $accent;
   position: relative;
   z-index: 1;
-  a, a:visited, a:focus, a:hover,
-  h1, h2, h3, h4, h5, h6 {
-    color: $light;
-  }
+  // a, a:visited, a:focus, a:hover,
+  // h1, h2, h3, h4, h5, h6 {
+  //   color: $light;
+  // }
   .container {
     padding: rem(22) rem(40);
     h1, h2, h3 {
+      font-family: "Quicksand", serif;
       margin-top: 0;
       font-size: rem(30);
     }
@@ -159,8 +165,12 @@ header {
   }
 }
 
+.main-copy {
+  overflow: hidden;
+}
+
 .section-header {
-  background-color: $background;
+  background-color: $dark;
   box-shadow: 0px 2px 13px 1px #1F1300;
   color: $light;
   position: relative;
@@ -171,16 +181,39 @@ header {
   h1, h2 {
     margin-top: 0;
     font-size: rem(45);
+    font-family: "Libre Baskerville", serif;
+  }
+  .container {
+    padding-bottom: rem(15);
+    padding-top: rem(15);
   }
 }
 
-@media (min-width: rem(600)) {
+@media (min-width: rem(550)) {
   #main-nav ul {
     flex-direction: row;
-    li {
-      a {
+  }
 
-      }
+  .main-copy .intro {
+    position: relative;
+    overflow: visible;
+    * {
+      position: relative;
+      z-index: 2;
+    }
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      width: rem(324);
+      height: rem(300);
+      background-image: url("../../assets/img/marie-sketch.png");
+      background-repeat: no-repeat;
+      background-size: rem(324) auto;
+      background-position: 0 center;
+      bottom: rem(-60);
+      right: rem(-200);
+      z-index: 1;
     }
   }
 }
@@ -208,17 +241,15 @@ header {
 }
 
 footer {
-  background-color: $accent;
   margin-top: rem(40);
   .footer-content {
-    padding-bottom: rem(160);
-    background-color: $background;
+    padding-bottom: rem(120);
+    background-color: $dark;
     box-shadow: 0px 2px 13px 1px #1F1300;
     position: relative;
     z-index: 2;
   }
   p {
-    color: $light;
     font-family: "Quicksand", sans-serif;
     margin: 0;
   }
