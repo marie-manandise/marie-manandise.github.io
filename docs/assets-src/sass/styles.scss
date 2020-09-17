@@ -50,6 +50,28 @@ a {
   }
 }
 
+.button {
+  display: inline-block;
+  padding: rem(5) rem(30);
+  margin-right: rem(24);
+  color: $light;
+  border-radius: rem(30);
+  box-shadow: 0px 4px 6px -3px #1F1300;
+  &:visited, &:focus {
+    color: $light;
+  }
+  &:nth-child(odd) {
+    background-color: $accent;
+  }
+  &:nth-child(even) {
+    background-color: $background;
+  }
+  &:hover {
+    color: $light;
+    text-decoration: none;
+  }
+}
+
 .skip-to-content-link {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -97,27 +119,40 @@ h1, h2, h3, h4, h5, h6 {
   &:first-child {
     margin-top: rem(15);
   }
+  & + p {
+    margin-top: rem(25);
+  }
 }
 
 header {
-  background-color: $accent;
-  background: linear-gradient(190deg, rgba(176,46,12,1) 16%, rgba(4,75,127,1) 66%);  color: $light;
+  background-color: $background;
+  position: relative;
+  z-index: 1;
   a, a:visited, a:focus, a:hover,
   h1, h2, h3, h4, h5, h6 {
     color: $light;
+  }
+  .container {
+    padding: rem(22) rem(40);
+    h1, h2 {
+      margin-top: 0;
+      font-size: rem(30);
+    }
   }
 }
 
 #main-nav ul {
   padding: 0;
-  margin: rem(35) -1.5rem 0 -1.5rem;
+  margin: rem(20) -1.5rem 0 -1.5rem;
   display: flex;
   flex-direction: column;
   list-style-type: none;
   li {
     a {
+      display: block;
       font-family: "Quicksand", sans-serif;
-      padding: 1.5rem;
+      padding: 0 1.5rem;
+      margin: 0.3rem;
       &:hover {
         text-decoration: none;
       }
@@ -125,14 +160,50 @@ header {
   }
 }
 
-@media screen and (min-width: 600px) {
-  body {
-    background-color: red;
+.section-header {
+  background-color: $accent;
+  box-shadow: 0px 2px 13px 1px #1F1300;
+  color: $light;
+  position: relative;
+  z-index: 2;
+  a, h1, h2, h3, h4,h5, h6 {
+    color: $light;
   }
+  h1, h2 {
+    margin-top: 0;
+    font-size: rem(45);
+  }
+}
+
+@media (min-width: rem(600)) {
   #main-nav ul {
     flex-direction: row;
-    li a {
-      padding: 0.75rem 1.5rem;
+    li {
+      a {
+
+      }
+    }
+  }
+}
+
+@media (min-width: rem(900)) {
+  header {
+    .container {
+      padding-top: rem(20);
+      padding-bottom: rem(20);
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  #main-nav {
+    ul {
+      margin-top: 0;
+      li a {
+        margin: 0;
+        padding-top: rem(10);
+        padding-bottom: rem(10);
+      }
     }
   }
 }
