@@ -372,6 +372,14 @@ a {
   a:hover, a:visited, a:focus {
     color: #2A1E5C; }
 
+img {
+  max-width: 100%; }
+
+figure figcaption {
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.88889em;
+  text-align: center; }
+
 .button {
   display: inline-block;
   padding: 0.27778em 1.66667em;
@@ -423,8 +431,10 @@ a {
   padding: 2.22222em;
   max-width: 41.66667em;
   margin: auto; }
+  .container--large {
+    max-width: 57.22222em; }
 
-p, ul, ol, table {
+p, ul, ol, table, figure {
   margin: 1.94444em 0 0 0;
   padding: 0; }
 
@@ -433,7 +443,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2.77778em; }
   h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
     margin-top: 0.83333em; }
-  h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+  h1 + p,
+  h1 + figure, h2 + p,
+  h2 + figure, h3 + p,
+  h3 + figure, h4 + p,
+  h4 + figure, h5 + p,
+  h5 + figure, h6 + p,
+  h6 + figure {
     margin-top: 1.38889em; }
 
 header {
@@ -534,3 +550,60 @@ footer {
   footer p {
     font-family: "Quicksand", sans-serif;
     margin: 0; }
+
+@media (min-width: 33.33333em) {
+  #about-pic {
+    float: left;
+    margin-right: 2.22222em;
+    margin-bottom: 1.66667em;
+    width: 33.33%; }
+    #about-pic img {
+      margin-top: 0.66667em; } }
+
+ul.timeline {
+  list-style-type: none; }
+  ul.timeline li {
+    display: block;
+    padding: 0 0 3.33333em 2.22222em;
+    margin-left: 0.88889em;
+    position: relative;
+    border-left: 0.44444em solid #1F1300; }
+    ul.timeline li:last-child {
+      border-left: none; }
+      ul.timeline li:last-child:before {
+        left: -0.38889em; }
+    ul.timeline li:before {
+      content: '';
+      display: block;
+      width: 1.16667em;
+      height: 1.16667em;
+      background-color: #1F1300;
+      border-radius: 50%;
+      position: absolute;
+      top: -0.11111em;
+      left: -0.83333em; }
+    ul.timeline li p {
+      position: relative;
+      top: -1.5em; }
+      ul.timeline li p span {
+        color: #B02E0C;
+        display: block;
+        font-family: "Quicksand", sans-serif;
+        font-size: 1.88889em; }
+    ul.timeline li p:first-child {
+      margin-top: 0; }
+
+@media (min-width: 33.33333em) {
+  ul.timeline li {
+    margin-left: calc(50% - 4px); }
+    ul.timeline li:nth-child(even) {
+      border-left: none;
+      border-right: 0.44444em solid #1F1300;
+      margin-right: calc(50% - 4px);
+      margin-left: 0;
+      padding-left: 0;
+      padding-right: 2.22222em;
+      text-align: right; }
+      ul.timeline li:nth-child(even):before {
+        left: auto;
+        right: -0.77778em; } }
