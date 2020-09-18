@@ -372,6 +372,9 @@ a {
   a:hover, a:visited, a:focus {
     color: #2A1E5C; }
 
+strong, b {
+  color: #B02E0C; }
+
 img {
   max-width: 100%; }
 

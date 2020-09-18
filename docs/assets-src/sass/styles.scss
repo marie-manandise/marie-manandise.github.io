@@ -50,6 +50,10 @@ a {
   }
 }
 
+strong, b {
+  color: $background;
+}
+
 img {
   max-width: 100%;
 }
