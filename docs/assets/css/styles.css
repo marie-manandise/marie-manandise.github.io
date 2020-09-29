@@ -627,3 +627,12 @@ html {
     .page-404 .container h1 span, .page-404 .container p span {
       display: inline-block;
       background-color: rgba(255, 255, 255, 0.8); }
+
+ul.writings-list {
+  margin-left: 1.11111em; }
+  ul.writings-list li {
+    margin-bottom: 2.22222em; }
+    ul.writings-list li a {
+      display: block;
+      font-family: "Quicksand", sans-serif;
+      font-size: 1.11111em; }

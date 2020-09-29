@@ -379,3 +379,15 @@ html {
     }
   }
 }
+
+ul.writings-list {
+  margin-left: rem(20);
+  li {
+    margin-bottom: rem(40);
+    a {
+      display: block;
+      font-family: "Quicksand", sans-serif;
+      font-size: rem(20);
+    }
+  }
+}
